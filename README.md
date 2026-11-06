@@ -10,7 +10,8 @@
 
 ## 安装
 
-`dist/Git同步.apk` 拷到手机直接安装（需允许未知来源）。
+可直接在 [Releases](https://github.com/severalfly/GitSyncApp/releases) 下载 `GitSyncApp-v1.0.0.apk`；
+或把 `dist/Git同步.apk` 拷到手机直接安装（需允许未知来源）。
 
 ## 快速开始
 
