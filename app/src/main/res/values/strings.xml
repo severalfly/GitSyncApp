@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Git 同步</string>
+    <string name="add_repo">添加仓库</string>
+    <string name="sync_all">全部同步</string>
+    <string name="settings">设置</string>
+    <string name="empty_repos">还没有仓库\n\n点上方「添加仓库」\n可以克隆一个远程地址，或关联本地文件夹</string>
+
+    <string name="auto_mode">自动模式</string>
+    <string name="manual_mode">手动模式</string>
+    <string name="one_key_sync">一键同步（拉取 + 提交 + 推送）</string>
+    <string name="sync_hint">点一下就完成：拉取远程 → 暂存本地修改 → 提交 → 推送</string>
+    <string name="syncing">同步中…</string>
+    <string name="log_title">执行日志</string>
+
+    <string name="op_fetch">获取</string>
+    <string name="op_pull">拉取</string>
+    <string name="op_stage">暂存</string>
+    <string name="op_commit">提交</string>
+    <string name="op_push">推送</string>
+    <string name="op_status">状态</string>
+    <string name="op_history">提交历史</string>
+    <string name="op_branch">分支</string>
+    <string name="op_remote">远程</string>
+    <string name="op_files">文件</string>
+    <string name="op_conflict">冲突</string>
+    <string name="op_clone">克隆</string>
+    <string name="op_edit_repo">仓库设置</string>
+    <string name="op_gitignore">忽略规则</string>
+
+    <string name="save">保存</string>
+    <string name="delete">删除</string>
+    <string name="cancel">取消</string>
+    <string name="ok">确定</string>
+    <string name="input_hint">在这里输入</string>
+    <string name="repo_name">仓库名称</string>
+    <string name="local_path">本地文件夹路径</string>
+    <string name="remote_url">远程地址</string>
+    <string name="auth_type">认证方式（none / https / ssh）</string>
+    <string name="username">用户名</string>
+    <string name="token">密码 / Token</string>
+    <string name="ssh_key">SSH 私钥（PEM 文本）</string>
+    <string name="ssh_passphrase">私钥口令（可留空）</string>
+    <string name="branch">分支</string>
+    <string name="message_template">自动提交消息模板</string>
+    <string name="clone_depth">克隆深度（0=完整）</string>
+    <string name="commit_message">提交消息</string>
+    <string name="storage_perm">存储权限</string>
+    <string name="pick_folder">选择文件夹</string>
+
+    <string name="author_name">作者名</string>
+    <string name="author_email">作者邮箱</string>
+    <string name="default_template">默认提交消息模板（%date 会替换成时间）</string>
+    <string name="interval_minutes">定时同步间隔（分钟，0=关闭）</string>
+    <string name="sync_on_open">打开应用时同步全部</string>
+    <string name="sync_on_close">关闭应用时同步全部</string>
+    <string name="retry_network">网络恢复后自动重试</string>
+    <string name="notify_result">同步完成后发通知</string>
+</resources>

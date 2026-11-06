@@ -1,0 +1,46 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.leon.gitsync'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.leon.gitsync"
+        minSdk 26
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.debug
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    packagingOptions {
+        resources {
+            excludes += ['META-INF/DEPENDENCIES', 'META-INF/LICENSE', 'META-INF/LICENSE.txt',
+                         'META-INF/NOTICE', 'META-INF/NOTICE.txt', 'META-INF/*.kotlin_module']
+        }
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation('org.eclipse.jgit:org.eclipse.jgit:4.11.0.201803080745-r') {
+        exclude group: 'org.apache.httpcomponents'
+    }
+    implementation 'com.jcraft:jsch:0.1.55'
+    implementation 'org.slf4j:slf4j-android:1.7.36'
+}

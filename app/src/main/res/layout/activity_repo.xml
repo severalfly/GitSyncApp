@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="middle"
+        android:singleLine="true"
+        android:textColor="@color/text"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/subtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:ellipsize="middle"
+        android:singleLine="true"
+        android:textColor="@color/text_sub"
+        android:textSize="11sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_auto_mode"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minWidth="0dp"
+            android:text="@string/auto_mode"
+            android:textSize="13sp" />
+
+        <Button
+            android:id="@+id/btn_manual_mode"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minWidth="0dp"
+            android:text="@string/manual_mode"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <!-- 自动模式 -->
+    <LinearLayout
+        android:id="@+id/panel_auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="10dp">
+
+        <Button
+            android:id="@+id/btn_sync"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:backgroundTint="@color/accent"
+            android:text="@string/one_key_sync"
+            android:textColor="#FFFFFF"
+            android:textSize="17sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="@string/sync_hint"
+            android:textColor="@color/text_sub"
+            android:textSize="12sp" />
+
+        <CheckBox
+            android:id="@+id/cb_auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="加入定时自动同步" />
+
+        <CheckBox
+            android:id="@+id/cb_open"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="打开应用时自动同步" />
+
+        <CheckBox
+            android:id="@+id/cb_close"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="退出应用时自动同步" />
+    </LinearLayout>
+
+    <!-- 手动模式 -->
+    <LinearLayout
+        android:id="@+id/panel_manual"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+        android:visibility="gone">
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+            <Button android:id="@+id/op_fetch" style="@style/OpButton" android:text="@string/op_fetch" />
+            <Button android:id="@+id/op_pull" style="@style/OpButton" android:text="@string/op_pull" />
+            <Button android:id="@+id/op_stage" style="@style/OpButton" android:text="@string/op_stage" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+            <Button android:id="@+id/op_commit" style="@style/OpButton" android:text="@string/op_commit" />
+            <Button android:id="@+id/op_push" style="@style/OpButton" android:text="@string/op_push" />
+            <Button android:id="@+id/op_status" style="@style/OpButton" android:text="@string/op_status" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+            <Button android:id="@+id/op_history" style="@style/OpButton" android:text="@string/op_history" />
+            <Button android:id="@+id/op_branch" style="@style/OpButton" android:text="@string/op_branch" />
+            <Button android:id="@+id/op_remote" style="@style/OpButton" android:text="@string/op_remote" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+            <Button android:id="@+id/op_files" style="@style/OpButton" android:text="@string/op_files" />
+            <Button android:id="@+id/op_conflict" style="@style/OpButton" android:text="@string/op_conflict" />
+            <Button android:id="@+id/op_edit" style="@style/OpButton" android:text="@string/op_edit_repo" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="每个按钮只做一件事，提交时会让你填消息"
+            android:textColor="@color/text_sub"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/log_title"
+        android:textColor="@color/text"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:id="@+id/log_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#FF101820"
+        android:padding="8dp">
+        <TextView
+            android:id="@+id/log"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:textColor="#FFB8E986"
+            android:textSize="11sp" />
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,17 @@
+# Android / Gradle 构建产物
+.gradle/
+build/
+app/build/
+local.properties
+.idea/
+*.iml
+.DS_Store
+captures/
+.externalNativeBuild
+.cxx/
+
+# 开发机自包含工具链与临时文件（不入库）
+toolchain/
+tmp/
+
+# dist/ 下已编译好的 APK 保留在仓库中，方便直接下载安装
